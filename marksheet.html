@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marksheet</title>
+</head>
+<body>
+    ,<script>
+        var name = prompt("Enter Your Name");
+        var fname = prompt("Enter Father Your Name");
+        var rnum = prompt("Enter your roll number");
+        var chem = parseInt (prompt("Enter your chemistry marks"));
+        var math = parseInt (prompt("Enter your math marks"));
+        var phy = parseInt (prompt("Enter your physics marks"));
+        var bio = parseInt (prompt("Enter your biology marks"));
+        var total = chem + phy + math + bio;
+        var percentage = (total / 400) * 100 ;
+
+        
+        
+     document.write("<center><h1>BIO DATA</h1><center> <br>");
+     document.write("<b>Name</b> :" + name + "<br>");
+     document.write("<b>Father Name</b> :" + fname + "<br>");
+     document.write("<b>roll number</b> :" + rnum + "<br>")
+     document.write("<b>chemistry</b> :" + chem + "<br>");
+     document.write("<b>math</b> :" + math + "<br>");
+     document.write("<b>physics</b> :" + phy + "<br>");
+     document.write("<b>biology</b> :" + bio+ "<br>");  
+     document.write("<b>total marks :" + total + "<br>" );
+     document.write("<b>percentage </b> :" + percentage + "<br>");
+        </script>
+</body>
+</html>

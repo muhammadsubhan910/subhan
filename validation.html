@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>validation</title>
+</head>
+<body>
+    <style>
+        .box{
+         width: 300px;
+         height: 300px;
+         margin: auto;
+         border: 1px ridge black;
+         box-shadow: 4px 4px 10px 8px rgba(0, 0, 0, 220);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 200px;
+  
+     }
+     form{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+     }
+  
+     #mess,#mess1{
+  
+       color: red;
+  
+     }
+     .p1{
+         font-size: larger;
+         font-weight: lighter;
+         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+     }
+  
+     .p2{
+         font-size: large;
+         font-weight: lighter;
+         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+     }
+  
+  
+         
+  </style>
+  
+  </head>
+  <body>
+      <div class="box">
+      <form onsubmit="return validation()">
+      <p class="p1">Password</p>
+      <input type="text" id="pass">
+      <span id="mess"></span>
+      <p class="p2">Confirm Password</p>
+      <input type="text" id="pass1">
+      <span id="mess1"></span>
+      <input type="submit" id="btn" value="submit">
+      
+      
+    </form>
+  
+    </div>
+  
+    <script>
+         
+         function validation(){
+  
+           var a = document.getElementById('pass').value;
+           
+           var b = document.getElementById('pass1').value;
+  
+           if(a==""){
+  
+              document.getElementById('mess').innerHTML='** Please Fill This Field';
+              return false;
+  
+          }
+  
+          else{
+              document.getElementById('mess').innerHTML = '';
+          }
+  
+          if(a.length > 8){
+  
+              document.getElementById("mess").innerHTML='**Password must be 8 character';
+              return false;
+          }
+          
+          else{
+            document.getElementById('mess').innerHTML = '';
+  
+          }
+  
+          if(b!=a){
+  
+          document.getElementById('mess1').innerHTML="Password doesn't match";
+          return false;
+  
+          }
+          else{
+              document.getElementById('mess1').innerHTML='';
+          }
+         
+  
+        }   
+        
+    
+     </script>
+</body>
+</html>
